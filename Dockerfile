@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 
-## Base
+
 FROM bitnami/git:2.43.1 AS base
 
 WORKDIR /src
@@ -14,7 +14,7 @@ cat << EOF >> site/hugo.yaml
 EOF
 EOR
 
-### Dependencies
+
 FROM betterweb/hugo:extended-0.121.1-20-1 AS dependencies
 
 WORKDIR /src/site
